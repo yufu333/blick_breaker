@@ -22,6 +22,7 @@ canvas = document.getElementById("canvas") # Canvas要素を取得
 context = canvas.getContext("2d") # 2D描画コンテキストを取得
 blocks = [] # ブロックのリスト
 game = {"game_over":True} # ゲームの状態を管理する辞書
+mouse_active = False  # Canvas内にマウスがある間だけ True
 
 def init_game():
     """ゲームの初期化"""
