@@ -29,7 +29,7 @@ def init_game():
     # ブロックの初期化
     blocks = [[(y+1)] * COLS for y in range(ROWS)] 
     # スピード
-    speed = 8 
+    speed = 10  # 初期値
     # ランダムな角度を作る
     while True:
         angle = random.uniform(200, 340)
