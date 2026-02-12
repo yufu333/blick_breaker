@@ -11,7 +11,7 @@ BALL_SPEED = 15 # ボールの速度
 BALL_SIZE = 16 # ボールのサイズ
 BLOCK_W = 50 # ブロックの幅
 BLOCK_H = 20 # ブロックの高さ
-COLS = 400 / BLOCK_W # ブロックの列数
+COLS = 400 // BLOCK_W # ブロックの列数
 ROWS = 8 # ブロックの行数
 BLOCK_COLORS = [  #ブロックの色
     "white", "red", "orange", "magenta", "pink", "cyan", "lime", "green", "blue"]
@@ -109,7 +109,7 @@ def update_ball():
 
 def check_blocks(bx,by):
     """ブロックとの衝突判定"""
-    block_x, block_y = bx // BLOCK_W, by // BLOCK_H
+    block_x, block_y = int(bx // BLOCK_W), int(by // BLOCK_H)
     if 0 <= block_x < COLS and 0 <= block_y < ROWS:
         if blocks[block_y][block_x] != 0: # ブロックが存在する場合
             blocks[block_y][block_x] = 0 # ブロックを消す
