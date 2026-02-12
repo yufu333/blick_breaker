@@ -1,5 +1,3 @@
-mouse_active = False  # Canvas内にマウスがある間だけ True
-
 def start_button_on_click(event):
     """スタートボタンがクリックされたときの処理"""
     # スタートボタンの無効化
