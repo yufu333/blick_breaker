@@ -29,7 +29,7 @@ def init_game():
     # ブロックの初期化
     blocks = [[(y+1)] * COLS for y in range(ROWS)] 
     # スピード
-    speed = 5 
+    speed = 8 
     # ランダムな角度を作る
     while True:
         angle = random.uniform(200, 340)
@@ -95,6 +95,9 @@ def update_ball():
     elif check_blocks(bx, by):
         dy = -dy
         game["score"] += 1
+        # スピードアップ
+        dx *= 1.02
+        dy *= 1.02
         if game["score"] >= COLS * ROWS:
             game_over("クリア！")
     # 落下
