@@ -29,7 +29,7 @@ def init_game():
     # ブロックの初期化
     blocks = [[(y+1)] * COLS for y in range(ROWS)] 
     # スピード
-    speed = 12  # 初期値
+    speed = 11  # 初期値
     # ランダムな角度を作る
     while True:
         angle = random.uniform(200, 340)
@@ -126,4 +126,3 @@ def game_over(msg):
     # ゲームオーバーとスコアの表示
     info.innerText=f"{msg} スコア: {game['score']}"
     game["game_over"] = True
-
